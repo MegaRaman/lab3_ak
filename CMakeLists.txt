@@ -8,8 +8,8 @@ set(SOURCE_LIB lab3ak calculator.cpp)
 
 include_directories(include)
 
-add_library(sharedtest SHARED calculator.cpp)
+add_library(sharedtest SHARED ${SOURCE_LIB})
 
-add_executable(elfFile main.cpp)
+add_executable(elfFile ${SOURCE_EXE})
 
 target_link_libraries(elfFile sharedtest)
